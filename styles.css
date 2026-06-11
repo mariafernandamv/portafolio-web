@@ -1,0 +1,314 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --main: #6c63ff;
+  --bg: #f4f6ff;
+  --card: #ffffff;
+  --text: #222;
+  --nav: #1e1e2f;
+  --header-bg: #3a7ca5;
+}
+
+/* =========================
+   MODO OSCURO 
+========================= */
+body.dark-mode {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #f1f1f1;
+  --nav: #000;
+  --header-bg: #1a1a1a;
+}
+
+/* =========================
+   GENERAL
+========================= */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  background: var(--header-bg);
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================
+   NAV
+========================= */
+.nav {
+  display: flex;
+  background: var(--nav);
+}
+
+.nav-link {
+  flex: 1;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   TARJETAS
+========================= */
+.cards-container,
+.paquetes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px;
+  justify-content: center;
+}
+
+.card {
+  width: 260px;
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid #1b2a4a;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card:active {
+  transform: scale(0.97);
+}
+
+.card img,
+.img-cable {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-body,
+.card .info {
+  padding: 14px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+/* =========================
+   FORMULARIOS
+========================= */
+.form-card {
+  border: 2px solid #1b2a4a;
+  border-radius: 10px;
+  padding: 20px;
+  background: var(--card);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: var(--nav);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* =========================
+   BOTÓN MODO OSCURO
+========================= */
+#toggleDark {
+  background: var(--main);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+#toggleDark:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   PAQUETES
+========================= */
+.paquetes-titulo {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 30px 0 8px;
+}
+
+.paquetes-sub {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.paquetes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.paquete {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.paquete:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   FORMULARIOS
+========================= */
+.formularios-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+.form-card {
+  width: 420px;
+  background: var(--card);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.form-card input,
+.form-card select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.95rem;
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+  border: 1px solid #0077ff;
+  box-shadow: 0 0 5px rgba(0, 119, 255, 0.3);
+}
+
+/* =========================
+   BOTONES
+========================= */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0077ff, #00c6ff);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 119, 255, 0.3);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 119, 255, 0.4);
+}
+
+.btn-contratar {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-contratar:hover {
+  background: #0077ff;
+  transform: scale(1.05);
+}
+
+/* =========================
+   OTRO TEMA
+========================= */
+#otro-tema-wrap {
+  display: none;
+}
+
+/* =========================
+   NOSOTROS
+========================= */
+.nosotros {
+  padding: 20px;
+  text-align: center;
+}
+
+.foto-nosotros {
+  width: 180px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 700px) {
+  .form-card {
+    width: 95%;
+  }
+
+  .paquete {
+    width: 90%;
+  }
+}

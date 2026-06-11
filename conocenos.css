@@ -1,0 +1,152 @@
+/* =========================
+   TITULOS
+========================= */
+.paquetes-titulo {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 30px 0 8px;
+}
+
+.paquetes-sub {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   PAQUETES
+========================= */
+.paquetes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.paquete {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.paquete:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   TEXTO INFO (ARREGLADO DEL STYLE)
+========================= */
+.info-texto {
+  text-align: center;
+}
+
+/* =========================
+   FORMULARIOS FLEX
+========================= */
+.formularios-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+/* FORM MÁS GRANDE */
+.form-card {
+  width: 420px;
+  background: var(--card);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+/* INPUTS */
+.form-card input,
+.form-card select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* FOCUS */
+.form-card input:focus,
+.form-card select:focus {
+  border: 1px solid #0077ff;
+  box-shadow: 0 0 5px rgba(0, 119, 255, 0.3);
+}
+
+/* =========================
+   BOTÓN 
+========================= */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0077ff, #00c6ff);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 119, 255, 0.3);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 119, 255, 0.4);
+}
+
+/* =========================
+   BOTÓN CONTRATAR
+========================= */
+.btn-contratar {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-contratar:hover {
+  background: #0077ff;
+  transform: scale(1.05);
+}
+
+/* =========================
+   OTRO TEMA
+========================= */
+#otro-tema-wrap {
+  display: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 700px) {
+  .form-card {
+    width: 95%;
+  }
+
+  .paquete {
+    width: 90%;
+  }
+}

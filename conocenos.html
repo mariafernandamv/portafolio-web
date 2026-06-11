@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Conocenos</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/conocenos.css" />
+  </head>
+
+  <body>
+    <main>
+      <!-- PAQUETES -->
+      <h2 class="paquetes-titulo">Nuestros Paquetes</h2>
+      <p class="paquetes-sub">Soluciones tecnológicas para tu empresa</p>
+
+      <div class="paquetes">
+        <div class="paquete">
+          <h3>Redes</h3>
+          <p>Instalación y configuración</p>
+          <div>₡200</div>
+          <button class="btn-contratar" onclick="contratarPaquete('Redes')">
+            Contratar
+          </button>
+        </div>
+
+        <div class="paquete">
+          <h3>Soporte PC</h3>
+          <p>Mantenimiento mensual</p>
+          <div>₡150</div>
+          <button
+            class="btn-contratar"
+            onclick="contratarPaquete('Soporte PC')"
+          >
+            Contratar
+          </button>
+        </div>
+
+        <div class="paquete">
+          <h3>Seguridad</h3>
+          <p>Antivirus y respaldo</p>
+          <div>₡180</div>
+          <button class="btn-contratar" onclick="contratarPaquete('Seguridad')">
+            Contratar
+          </button>
+        </div>
+
+        <div class="paquete">
+          <h3>Nube</h3>
+          <p>Almacenamiento remoto</p>
+          <div>₡250</div>
+          <button class="btn-contratar" onclick="contratarPaquete('Nube')">
+            Contratar
+          </button>
+        </div>
+      </div>
+
+      <p class="info-texto">
+        Inscribete en nuestros cursos, nosotros te capacitamos de manera virtual
+        o presencial.
+      </p>
+
+      <!-- FORMULARIOS -->
+      <div class="formularios-wrap">
+        <div class="form-card">
+          <h2>Cursos Gratuitos</h2>
+
+          <form onsubmit="enviarCurso(event)">
+            <input id="c-nombre" placeholder="Nombre completo" required />
+            <input id="c-empresa" placeholder="Empresa" required />
+            <input
+              id="c-capacidad"
+              type="number"
+              placeholder="Capacidad"
+              required
+            />
+            <input id="c-correo" type="email" placeholder="Correo" required />
+            <input id="c-telefono" placeholder="Teléfono" required />
+            <input id="c-direccion" placeholder="Dirección" required />
+
+            <select id="c-tema" onchange="mostrarOtro(this)" required>
+              <option value="">Selecciona tema</option>
+              <option>Redes</option>
+              <option>Seguridad</option>
+              <option>Python</option>
+              <option>Mantenimiento</option>
+              <option>Hardware</option>
+              <option>IA</option>
+              <option>Otro</option>
+            </select>
+
+            <div id="otro-tema-wrap">
+              <input id="c-tema-otro" placeholder="Escribe tu tema" />
+            </div>
+
+            <button type="submit" class="btn-submit">Inscribirme</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
